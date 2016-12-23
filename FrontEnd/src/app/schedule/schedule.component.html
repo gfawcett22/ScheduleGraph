@@ -1,0 +1,14 @@
+<div id="scheduleContainer" class="container-fluid">
+  <!--<ng2-datepicker [(ngModel)]="startDate"></ng2-datepicker>-->
+  <!--<span>to</span>-->
+  <!--<ng2-datepicker [(ngModel)]="endDate"></ng2-datepicker>-->
+  <input type="date" [(ngModel)]="startDate" (change)="reloadSchedule()" />
+  <input type="date" [(ngModel)]="endDate" (change)="reloadSchedule()"/>
+  <div class="row"></div>
+  <div class="row" >
+    <div *ngFor="let run of runs" [style.width.%]="100/runs.length" class="scheduleDay">
+      {{run.compounds}}
+    </div>
+  </div>
+  <button (click)="showRuns()">show runs</button>
+</div>

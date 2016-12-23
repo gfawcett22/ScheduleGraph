@@ -1,0 +1,7 @@
+.scheduleContainer{
+  height:70%;
+}
+.scheduleDay{
+  height:100%;
+  border:.5px solid black;
+}

@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  schedulegraph:
+    image: schedulegraph
+    build:
+      context: .
+      dockerfile: Dockerfile
