@@ -21,11 +21,9 @@ export var ScheduleService = (function () {
     //get all runs in the given date period
     ScheduleService.prototype.getRuns = function (startDate, endDate) {
         //pass parameters via GET
-        console.log("start date: " + startDate);
-        console.log("end date: " + endDate);
         var url = this._scheduleUrl
-            + '?startDate=' + encodeURIComponent(startDate === null ? startDate.toDateString() : "")
-            + '&endDate=' + encodeURIComponent(endDate === null ? endDate.toDateString() : "");
+            + '?startDate=' + startDate.formatted
+            + '&endDate=' + endDate.formatted;
         console.log(url);
         return this._http.get(url)
             .map(function (response) { return response.json(); })
@@ -49,4 +47,4 @@ export var ScheduleService = (function () {
     ], ScheduleService);
     return ScheduleService;
 }());
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/app/schedule/schedule.service.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/app/schedule/schedule.service.js.map

@@ -33,4 +33,4 @@ export var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/app/app.module.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/app/app.module.js.map

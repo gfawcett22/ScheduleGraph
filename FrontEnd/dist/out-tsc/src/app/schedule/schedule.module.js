@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 import { DatePickerModule } from 'ng2-datepicker';
 import { ScheduleComponent } from './schedule.component';
 import { ScheduleService } from "./schedule.service";
@@ -18,7 +18,7 @@ export var ScheduleModule = (function () {
     }
     ScheduleModule = __decorate([
         NgModule({
-            imports: [CommonModule, FormsModule, DatePickerModule],
+            imports: [BrowserModule, FormsModule, DatePickerModule],
             exports: [ScheduleComponent],
             declarations: [ScheduleComponent],
             providers: [ScheduleService]
@@ -27,4 +27,4 @@ export var ScheduleModule = (function () {
     ], ScheduleModule);
     return ScheduleModule;
 }());
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/app/schedule/schedule.module.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/app/schedule/schedule.module.js.map

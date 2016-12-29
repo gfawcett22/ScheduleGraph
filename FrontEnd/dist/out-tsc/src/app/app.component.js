@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 export var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'test!';
+        this.title = 'Schedule Graph';
     }
     AppComponent = __decorate([
         Component({
@@ -22,4 +22,4 @@ export var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/app/app.component.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/app/app.component.js.map

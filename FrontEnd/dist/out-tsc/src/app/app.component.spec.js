@@ -27,4 +27,4 @@ describe('AppComponent', function () {
         expect(compiled.querySelector('h1').textContent).toContain('app works!');
     }));
 });
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/app/app.component.spec.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/app/app.component.spec.js.map

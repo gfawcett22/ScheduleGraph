@@ -5,4 +5,4 @@
 export var environment = {
     production: false
 };
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/environments/environment.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/environments/environment.js.map

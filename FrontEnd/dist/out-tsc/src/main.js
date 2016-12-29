@@ -7,4 +7,4 @@ if (environment.production) {
     enableProdMode();
 }
 platformBrowserDynamic().bootstrapModule(AppModule);
-//# sourceMappingURL=E:/User/Documents/ScheduleGraph/src/src/main.js.map
+//# sourceMappingURL=E:/User/Documents/ScheduleGraph/FrontEnd/src/src/main.js.map
