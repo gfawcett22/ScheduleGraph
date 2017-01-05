@@ -1,13 +1,43 @@
 <div id="scheduleContainer" class="container-fluid">
   <span>{{errorMessage}}</span>
-  <ng2-datepicker [(ngModel)]="startDate" (ngModelChange)="reloadSchedule()" [options]="calendarOptions" ></ng2-datepicker>
+  <ng2-datepicker [(ngModel)]="startDate" (ngModelChange)="reloadSchedule()"
+                  [options]="calendarOptions"></ng2-datepicker>
   <span>&nbsp;&nbsp;-to-&nbsp;&nbsp;</span>
-  <ng2-datepicker [(ngModel)]="endDate" (ngModelChange)="reloadSchedule()" [options]="calendarOptions" ></ng2-datepicker>
-  <div class="row"></div>
-  <div class="row" >
-    <div *ngFor="let day of getDaysBetweenDates()" [style.width.%]="100/runs.length" class="scheduleDay">
-      <div *ngFor="let run of runs">
-        {{run.compounds}}
+  <ng2-datepicker [(ngModel)]="endDate" (ngModelChange)="reloadSchedule()" [options]="calendarOptions"></ng2-datepicker>
+  <table class="table">
+    <thead>
+    <th class="hourDisplay">12 am</th>
+    <th class="hourDisplay">1 am</th>
+    <th class="hourDisplay">2 am</th>
+    <th class="hourDisplay">3 am</th>
+    <th class="hourDisplay">4 am</th>
+    <th class="hourDisplay">5 am</th>
+    <th class="hourDisplay">6 am</th>
+    <th class="hourDisplay">7 am</th>
+    <th class="hourDisplay">8 am</th>
+    <th class="hourDisplay">9 am</th>
+    <th class="hourDisplay">10 am</th>
+    <th class="hourDisplay">11 am</th>
+    <th class="hourDisplay">12 pm</th>
+    <th class="hourDisplay">1 pm</th>
+    <th class="hourDisplay">2 pm</th>
+    <th class="hourDisplay">3 pm</th>
+    <th class="hourDisplay">4 pm</th>
+    <th class="hourDisplay">5 pm</th>
+    <th class="hourDisplay">6 pm</th>
+    <th class="hourDisplay">7 pm</th>
+    <th class="hourDisplay">8 pm</th>
+    <th class="hourDisplay">9 pm</th>
+    <th class="hourDisplay">10 pm</th>
+    <th class="hourDisplay">11 pm</th>
+    </thead>
+  </table>
+  <div *ngFor="let day of runs">
+    <div class="row">
+      <div *ngFor="let run of day">
+        <div class="runDiv">
+          <app-run [runData]="run"></app-run>
+        </div>
       </div>
     </div>
   </div>

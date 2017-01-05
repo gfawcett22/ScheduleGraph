@@ -7,11 +7,12 @@ import {DatePickerModule} from 'ng2-datepicker';
 import {ScheduleComponent} from './schedule.component';
 import {ScheduleService} from "./schedule.service";
 import {FormsModule} from "@angular/forms";
+import {RunComponent} from "./run.component";
 
 @NgModule({
   imports:[BrowserModule,FormsModule, DatePickerModule],
   exports:[ScheduleComponent],
-  declarations:[ScheduleComponent],
+  declarations:[ScheduleComponent, RunComponent],
   providers:[ScheduleService]
 })
 export class ScheduleModule{}

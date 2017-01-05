@@ -30,6 +30,9 @@ jspm_packages
 # Optional npm cache directory
 .npm
 
+#Typescript map files
+*.js.map
+
 # Optional REPL history
 .node_repl_history
 
@@ -285,7 +288,6 @@ ClientBin/
 *.jfm
 *.pfx
 *.publishsettings
-node_modules/
 orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
