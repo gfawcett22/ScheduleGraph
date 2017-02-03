@@ -20,11 +20,24 @@ export var RunComponent = (function () {
     function RunComponent() {
     }
     RunComponent.prototype.ngOnInit = function () {
-        this.runWidth = ((100 / 24) * this.runData.runTime);
+        //the run percent is 100% divided by 24 hours in a day times the runtime
+        this.runWidthPercent = ((100 / 24) * this.runData.runTime);
+        this.runWidthPixels = window.screen.availWidth * (this.runWidthPercent / 100);
+        var startTime = new Date(this.runData.startDate);
+        this.runLeftPercent = ((100 / 24) * startTime.getHours());
+        console.log("run data start date: " + this.runData.s);
+        console.log("start time: " + startTime);
+        console.log("hours: " + startTime.getHours());
+        console.log(this.runLeftPercent);
+        //console.log(this.runWidthPercent);
+        //console.log(this.runWidthPixels);
+        //console.log()
     };
     RunComponent.prototype.getRandomColor = function () {
-        var randomInt = Math.floor(Math.random() * 5);
-        return colors[randomInt];
+        // let randomInt = Math.floor(Math.random() * 5);
+        // console.log(randomInt);
+        // return colors[randomInt];
+        return colors[this.runData.runID % 4];
     };
     __decorate([
         Input(), 
@@ -33,8 +46,8 @@ export var RunComponent = (function () {
     RunComponent = __decorate([
         Component({
             selector: 'app-run',
-            styles: ['.run {display:inline}'],
-            template: "\n   <div class=\"run\" [style.width.%]=\"runWidth\" [style.background-color]=\"getRandomColor()\">\n   <span>Run ID: {{runData.runID}}</span>\n   <span>Order No: {{runData.orderNo}}</span>\n   <span>Quantity: {{runData.quantity}} {{runData.quantityUom}}</span>\n   <span>Promise Date: {{runData.promiseDate}}</span>\n   <span>Run Time: {{runData.runTime}}</span>\n  </div>\n  "
+            styles: ['.run {display:inline-block; border:1px solid black; height:60px; position:absolute}'],
+            template: "\n   <div class=\"run\" [style.width.%]=\"runWidthPercent\" [style.left.%]=\"runLeftPercent\" [style.background-color]=\"getRandomColor()\" >    \n     <span class=\"runDetails\">Run ID: {{runData.runID}}</span>\n     <span *ngIf=\"runWidthPixels > 350\" class=\"runDetails\">Order No: {{runData.orderNo}}</span>\n     <span *ngIf=\"runWidthPixels > 450\" class=\"runDetails\">Quantity: {{runData.quantity}} {{runData.quantityUom}}</span>\n     <span *ngIf=\"runWidthPixels > 550\" class=\"runDetails\">Promise Date: {{runData.promiseDate | date:'shortDate'}}</span>\n     <span *ngIf=\"runWidthPixels > 900\" class=\"runDetails\">Run Time: {{runData.runTime}} hrs</span>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], RunComponent);
